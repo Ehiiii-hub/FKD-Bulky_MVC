@@ -1,6 +1,6 @@
 using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Respository;
-using Bulky.DataAccess.Respository.IRepository;
+using Bulky.DataAccess.Repository;
+using Bulky.DataAccess.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 
 namespace BulkyWeb
