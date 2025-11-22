@@ -64,16 +64,16 @@ namespace BulkyWeb.Areas.Admin.Controllers
                     string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
                     string productPath = Path.Combine(wwwRootPath, @"images\products");
 
-                    //if (!string.IsNullOrEmpty(productVM.Product.ImageUrl))
-                    //{
-                    //    //Delete Old Image
-                    //    var oldImagePath = Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
+                    if (!string.IsNullOrEmpty(productVM.Product.ImageUrl))
+                    {
+                        //Delete Old Image
+                        var oldImagePath = Path.Combine(wwwRootPath, productVM.Product.ImageUrl.TrimStart('\\'));
 
-                    //    if (System.IO.File.Exists(oldImagePath))
-                    //    {
-                    //        System.IO.File.Delete(oldImagePath);
-                    //    }
-                    //}
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
                     //C:\Users\Dell\Desktop\Projects\Learning Projects\Backend Projects\Learning Backend (c#)\My GitHub repos(Backend)\Bulky_MVC\Bulky\BulkyWeb\wwwroot\Images\
                     using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
                     {
