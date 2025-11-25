@@ -1,9 +1,8 @@
 ﻿using Bulky.DataAccess.Data;
-using Bulky.DataAccess.Respository.IRepository;
-using Bulky.Models;
+using Bulky.DataAccess.Repository.IRepository;
 
 
-namespace Bulky.DataAccess.Respository
+namespace Bulky.DataAccess.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
